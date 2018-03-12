@@ -59,7 +59,7 @@ class AnagramGameTest {
             assertHighscoreEntry(2, "no", 2);
             lock.countDown();
         });
-        boolean wasCalled = lock.await(3, TimeUnit.MILLISECONDS);
+        boolean wasCalled = lock.await(3, TimeUnit.SECONDS);
         assertTrue(wasCalled);
     }
 
